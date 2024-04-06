@@ -67,11 +67,10 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
-        overflow: hidden;
+        background-size: 100% 100%;
         color: white;
         height: 100%;
-        /* padding-right: 50px; */
+        
     }
     .input-group__input {
         color: #000000;
@@ -95,5 +94,12 @@
         /* margin-top: calc(-1* var(--bs-gutter-y)); */
         margin-right: 0;
         margin-left: calc(-.5* var(--bs-gutter-x));
+    }
+    .q2{
+        margin-right: 20px;
+        margin-top: 0px;
+    }
+    .q1{
+        margin-top: 0px;
     }
 }
