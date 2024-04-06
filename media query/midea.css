@@ -1,0 +1,99 @@
+@media only screen and (max-width: 600px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    .view_position {
+        margin-top: 50%;
+        width: 100%;
+    }
+
+    .answer {
+        flex-direction: column;
+    }
+
+    .ratio_answer {
+        margin-top: 25px;
+    }
+
+    body {
+        background: url(../eidmubark\ mobile.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow: hidden;
+        color: white;
+        height: 100%;
+        /* padding-right: 50px; */
+    }
+    .input-group__input {
+        color: #000000;
+        font-size: 1.25rem;
+        line-height: 1;
+        border-style: none;
+        outline: none;
+        height: 20px;
+        width: 80%;
+        padding: 0.8em 1em;
+        border: 0.20em solid transparent;
+        background-image: linear-gradient(#162731, #162731), linear-gradient(20deg, #a1ed5a 0%,#55C0B3  50%, #FBC917 100%);
+        /* border:2px solid linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%); */
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border-radius: 1.8em;
+        background-size: 200% 100%;
+        transition: background-position 0.8s ease-out;
+    }
+    .row {
+        /* margin-top: calc(-1* var(--bs-gutter-y)); */
+        margin-right: 0;
+        margin-left: calc(-.5* var(--bs-gutter-x));
+    }
+}
