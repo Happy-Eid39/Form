@@ -17,6 +17,206 @@
     <!-- <link rel="stylesheet" href="/css/style.scss"> -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/media query/midea.css">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "El Messiri", sans-serif;
+    font-optical-sizing: auto;
+    direction: rtl;
+    word-wrap: normal;
+    word-spacing: 5px;
+}
+
+
+body {
+    background: url(https://i.ibb.co/K7Gm1nD/eid-mubark-pcpng2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+.q1{
+    margin-top: 200px;
+
+}
+.q1 h3 {
+    font-size: 1.975rem;
+    /* margin-top: 200px; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 
+:root {
+    --background-size: unquote("min(100vw, 40em)");
+} */
+
+html {
+    font-size: calc(100% + 0.5vw);
+}
+
+
+
+.input-group {
+    width: 100%;
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+@supports (mix-blend-mode:normal) {
+    .input-group {
+        position: relative;
+        mix-blend-mode: lighten;
+    }
+
+    .input-group__label {
+        position: absolute;
+        left: 3em;
+        top: -0.28em;
+        background: #000000;
+    }
+}
+
+.input-group__label {
+    padding: 0 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    letter-spacing: 0.1em;
+    color: rgb(6, 6, 255);
+    color: rgb(172, 11, 172);
+    cursor: pointer;
+}
+
+.input-group__input {
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    height: 20px;
+    width: 80%;
+    padding: 0.8em 1em;
+    border: 0.20em solid transparent;
+    background-image: linear-gradient(#162731, #162731), linear-gradient(120deg, #ED5A79 0%, #55C0B3 50%, #FBC917 100%);
+    /* border:2px solid linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%); */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease-out;
+}
+
+.input-group__input:hover {
+    background-position: 100% 0;
+}
+
+.input-group__input:focus {
+    outline: 2px dashed #000000;
+    outline-offset: 0.1em;
+}
+
+.condation {
+    margin-top: 35px;
+    font-family: "El Messiri", sans-serif;
+    /* text-align: center; */
+}
+
+.label_agree {
+    margin-left: 10px;
+    font-family: "El Messiri", sans-serif;
+}
+
+
+.form-check-input {
+    --bs-form-check-bg: var(--bs-body-bg);
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: .25em;
+    vertical-align: top;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #E7D9CE;
+    background-image: var(--bs-form-check-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* border: var(--bs-border-width) solid var(--bs-border-color); */
+    border: 5px solid #5A705A;
+
+}
+#myInput{
+    color: #FBC917;
+    font-family: "El Messiri", sans-serif;
+    text-align: center;
+}
+
+.answer {
+    flex-direction: column;
+}
+
+.ratio_answer {
+    margin-top: 25px;
+}
+
+.Next_btn {
+    background-color: #E7D9CE;
+    border: 5px solid #5A705A;
+    border-radius: 35px;
+}
+
+.Next_btn:hover {
+    background-color: #5a705a7e;
+    border: 5px solid #f3bf98;
+    transition: all 0.5s ease;
+}
+
+.form-check-input:checked {
+    background-color: #5a705a;
+    border-color: #ffffff;
+}
+
+.message {
+    width: auto;
+    margin-top: 40px;
+    text-align: center;
+    background-color: #162731;
+    border-radius: 30px;
+    padding: 5px;
+    color: #ff0202;
+    border: 1.5px solid #ff0202;
+    transition: all 1s ease-in-out;
+    font-family: "El Messiri", sans-serif;
+}
+
+.appear_message {
+    padding-top: 5px;
+    transition: all 1s ease-in-out;
+    color: #ff0202;
+    padding: 15px 10px 5px 10px;
+}
+
+
+.q2{
+    margin-right: 50px;
+    margin-top: 150px;
+}
+    </style>
 </head>
 <body class="bg">
     <div class="container w-100 h-100 ">
