@@ -22,11 +22,12 @@
 </head>
 
 <body class="bg">
+    <div class="svg hide1" id="svg"></div>
     <div class="container w-100 h-100 ">
         <div class="row view_position w-100 h-100 ">
             <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-12 col-sm-12 q_container w-100">
-                    <div class="q1 d-flex justify-content-center align-items-center flex-column">
+                    <div class="name_section d-flex justify-content-center align-items-center flex-column">
                         <h4>
 
                         </h4>
@@ -49,15 +50,15 @@
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                         </div>
                         <div class="submit mt-3">
-                            <button type="button" onclick="vaild()" class="btn Next_btn">التالي</button>
+                            <button type="button" onclick="vaild()" class="btn Next_btn" id="frist_btn">التالي</button>
                         </div>
-                        <div class="message d-none">
+                        <div class="message d-none position-absolute">
                             <h6 class="appear_message">
                                 برجاء ادخال الاسم
                             </h6>
                         </div>
                     </div>
-                    <div class="q2 d-none">
+                    <div class="q1 q_space d-none">
                         <h4>
                             السؤال الأول
                         </h4>
@@ -89,18 +90,350 @@
                                 </div>
                             </div>
                             <div class="submit d-flex justify-content-center align-items-center mt-4">
-                                <button type="button" class="btn Next_btn" onclick="print()">التالي</button>
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
                             </div>
                         </div>
                     </div>
+                    <div class="q2 q_space d-none">
+                        <h4>
+                            السؤال الثاني
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q3 q_space d-none">
+                        <h4>
+                            السؤال الثالث
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q4 q_space d-none">
+                        <h4>
+                            السؤال الرابع
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q5 q_space d-none">
+                        <h4>
+                            السؤال الخامس
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q6 q_space d-none">
+                        <h4>
+                            السؤال السادس
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q7 q_space d-none">
+                        <h4>
+                            السؤال السابع
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q8 q_space d-none">
+                        <h4>
+                            السؤال الثامن
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q9 q_space d-none">
+                        <h4>
+                            السؤال التاسع
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn"
+                                    onclick="switch_number_section()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q10 q_space d-none">
+                        <h4>
+                            السؤال العاشر
+                        </h4>
+                        <h3>
+                            هل ............؟
+                        </h3>
+                        <div class="answer p-3 d-flex ">
+                            <div class="d-flex flex-column">
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        الاول
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        الثاني
+                                    </label>
+                                </div>
+                                <div class="ratio_answer">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        الثالث
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center mt-4">
+                                <button type="submit" class="btn Next_btn" onclick="last_q()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

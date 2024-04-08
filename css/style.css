@@ -25,12 +25,12 @@ body {
 
 }
 
-.q1 {
+.name_section {
     margin-top: 200px;
 
 }
 
-.q1 h3 {
+.name_section h3 {
     font-size: 1.975rem;
     /* margin-top: 200px; */
 }
@@ -168,6 +168,11 @@ html {
     border: 5px solid #f3bf98;
     transition: all 0.5s ease;
 }
+.Next_btn:focus {
+    background-color: #5a705a7e;
+    border: 5px solid #f3bf98;
+    transition: all 0.5s ease;
+}
 
 .form-check-input:checked {
     background-color: #5a705a;
@@ -194,8 +199,20 @@ html {
     padding: 15px 10px 5px 10px;
 }
 
-
-.q2 {
+.q_space {
     margin-right: 50px;
     margin-top: 150px;
+}
+.svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    pointer-events: none;
+    /* background-color: #55C0B3; */
+}
+
+.hide1 {
+    display: none;
 }
