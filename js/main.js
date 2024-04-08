@@ -6,14 +6,14 @@ const message = document.querySelector(".message");
 const name_section = document.querySelector(".name_section");
 const q1 = document.querySelector(".q1");
 const appear_message = document.querySelector(".appear_message");
-
+const no_answer = document.querySelector(".message_no_answer");
 let collect_data = [];
-
 
 function clear() {
     setTimeout(() => {
         message.classList.replace("d-block", "d-none",);
-    }, 3000)
+        no_answer.classList.replace("d-block", "d-none",);
+    }, 1500)
 }
 function vaild() {
     if (Name.value == "") {
@@ -35,22 +35,36 @@ function vaild() {
         // console.log(collect_data)
     }
 }
-
 function switch_frist_page() {
     name_section.classList.replace("d-flex", "d-none");
     q1.classList.replace("d-none", "d-block");
 }
-
 let num_last = 0;
 let num_next = 1;
-function switch_number_section() {
-    num_last += 1
-    num_next += 1
-    switch_btn();
+function switch_number_section(page) {
+    checkRadio(page);
     // console.log(num_last)
     // console.log(num_next)
 }
-
+function checkRadio(page) {
+    let page_section = document.querySelector(`.${page}`);
+    var radios = page_section.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            checkedValue = radios[i].value;
+            // console.log("Option " + checkedValue + " is checked");
+            num_last += 1
+            num_next += 1
+            switch_btn();
+            break; // Exit the loop once a checked radio is found
+        }
+        else {
+            // console.log("No option is checked");
+            no_answer.classList.replace("d-none", "d-block");
+            clear();
+        }
+    }
+}
 
 function switch_btn() {
     let last_section = document.querySelector(`.q${num_last}`);
@@ -77,14 +91,33 @@ function get_answer(page) {
         collect_data.push(value);
         // console.log(value);
         // console.log(typeof(value));
-        console.log(collect_data);
+        // console.log(collect_data);
     }
 }
 function last_q() {
     let q10 = document.querySelector('.q10');
-    get_answer(q10)
-    sendData();
-    celebrate();
+    var radios = q10.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
+    var checkedValue = null;
+
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            get_answer(q10)
+            sendData();
+            let last_section = document.querySelector(".q10");
+            let next_section = document.querySelector(".finish_message");
+            last_section.classList.replace("d-block", "d-none");
+            next_section.classList.replace("d-none", "d-block");
+            celebrate();
+            break; 
+        }
+        else{
+            no_answer.classList.replace("d-none", "d-block");
+            clear();
+        }
+    }
+
+
+    
 }
 
 
@@ -94,7 +127,7 @@ function sendData() {
     let dataList = [
         { field1: collect_data[0], field2: collect_data[1], field3: collect_data[2], field4: collect_data[3], field5: collect_data[4], field6: collect_data[5], field7: collect_data[6], field8: collect_data[7], field9: collect_data[8], field10: collect_data[9], field11: collect_data[10] }
     ];
-    console.log(dataList)
+    // console.log(dataList)
     fetch(scriptURL, {
         method: 'POST',
         body: JSON.stringify(dataList)
@@ -106,7 +139,7 @@ function sendData() {
             return response.text();
         })
         .then(data => {
-            console.log(data); // Log the response from the server
+            // console.log(data); // Log the response from the server
             // Optionally, you can redirect the user or show a success message here
         })
         .catch(error => {
