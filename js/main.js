@@ -123,7 +123,7 @@ function q10() {
     }
 };
 function q11() {
-    var textArea = document.getElementById("exampleFormControlTextarea1");
+    var textArea = document.getElementById("exampleFormControlTextarea11");
     collect_data.push(textArea.value);
     collect_data.push(result);
     let last_section = document.querySelector(".q11");
