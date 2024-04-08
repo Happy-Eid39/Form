@@ -36,25 +36,32 @@
     .col-s-9 {
         width: 75%;
     }
+
     .col-s-10 {
         width: 83.33%;
     }
+
     .col-s-11 {
         width: 91.66%;
     }
+
     .col-s-12 {
         width: 100%;
     }
+
     .view_position {
         margin-top: 50%;
         width: 100%;
     }
+
     .answer {
         flex-direction: column;
     }
+
     .ratio_answer {
-        margin-top: 25px;
+        margin-top: 20px;
     }
+
     body {
         background: url(https://i.ibb.co/q1gBrFK/eidmubark-mobile.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -63,7 +70,9 @@
         background-size: 100% 100%;
         color: white;
         height: 100%;
+        overflow: hidden;
     }
+
     .input-group__input {
         color: #000000;
         font-size: 1.25rem;
@@ -74,7 +83,7 @@
         width: 80%;
         padding: 0.8em 1em;
         border: 0.20em solid transparent;
-        background-image: linear-gradient(#162731, #162731), linear-gradient(20deg, #a1ed5a 0%,#55C0B3  50%, #FBC917 100%);
+        background-image: linear-gradient(#162731, #162731), linear-gradient(20deg, #a1ed5a 0%, #55C0B3 50%, #FBC917 100%);
         /* border:2px solid linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%); */
         background-origin: border-box;
         background-clip: padding-box, border-box;
@@ -82,29 +91,35 @@
         background-size: 200% 100%;
         transition: background-position 0.8s ease-out;
     }
+
     .row {
         /* margin-top: calc(-1* var(--bs-gutter-y)); */
         margin-right: 0;
         margin-left: calc(-.5* var(--bs-gutter-x));
     }
-    .q_space{
+
+    .q_space {
         margin-right: 20px;
         margin-top: 0px;
     }
-    .name_section{
+
+    .name_section {
         margin-top: 0px;
     }
-    .finish_message{
+
+    .finish_message {
         /* background-color: #FBC917; */
         text-align: center;
         font-family: "Marhey", system-ui;
         margin-top: 50px;
-    
+
     }
-    .finish_message h1{
+
+    .finish_message h1 {
         margin-bottom: 50px;
     }
-    #special_message{
+
+    #special_message {
         font-family: "Marhey", system-ui;
         text-align: center;
         font-size: 20px;
@@ -115,23 +130,18 @@
         padding: 5px;
         margin: 0 30px 0 30px;
     }
-    .message_no_answer{
-        position:absolute;
-        top:60%;
-        left:50%;
-        transform: translateX(-50%) translateY(-50%);
+
+    .message_no_answer {
         color: #ff0202;
-        border: 1px solid #d1fb1700;
-        border-radius: 40px;
-        padding: 20px;
-        background: #16273100;
-        width: 80%;
+        /* background-color: #d1fb17; */
+        width: 100%;
         text-align: center;
-        z-index: 100;
     }
-    .Next_btn{
-        margin-top: 30px;
-    }
+
+    /* .Next_btn {
+        /* margin-top: 30px; 
+    } */
+
     .svg {
         width: 100%;
         height: 100%;
@@ -142,5 +152,42 @@
         right: 0;
         pointer-events: none;
         /* background-color: #55C0B3; */
+    }
+
+    /* .submit {
+        /* background-color: #55C0B3; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 90px;
+        position: relative;
+    }
+    #frist_btn {
+        position: absolute;
+        bottom: 0;
+    } */
+    .submit {
+        /* background-color: #55C0B3; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 80px;
+        position: relative;
+        /* background-color: #d1fb17; */
+
+    }
+
+    #frist_btn {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 0;
     }
 }

@@ -21,7 +21,7 @@ function vaild() {
         message.classList.replace("d-none", "d-block");
         clear();
         // celebrate();
-        
+
     }
     else if (Agree.checked == false) {
         appear_message.innerHTML = "يرجى تأكيد الموافقة على الشروط ";
@@ -31,7 +31,7 @@ function vaild() {
     else {
         collect_data.push(Name.value)
         switch_frist_page();
-        
+
         // console.log(collect_data)
     }
 }
@@ -62,7 +62,10 @@ function checkRadio(page) {
     }
     if (checkedValue) {
         // console.log("No option is checked");
+        const no_answer = document.querySelector(".message_no_answer");
         no_answer.classList.replace("d-none", "d-block");
+        // console.log(no_answer)
+        // alert("Please select")
         clear();
     }
 }
@@ -96,32 +99,24 @@ function get_answer(page) {
     }
 }
 function last_q() {
-    let q10 = document.querySelector('.q10');
-    var radios = q10.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
-    let checkedValue = true;
-
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            get_answer(q10)
-            sendData();
-            let last_section = document.querySelector(".q10");
-            let next_section = document.querySelector(".finish_message");
-            last_section.classList.replace("d-block", "d-none");
-            next_section.classList.replace("d-none", "d-block");
-            celebrate();
-            checkedValue = false;
-            break; 
-        }
-    }
-    if (checkedValue){
+    var textArea = document.getElementById("exampleFormControlTextarea1");
+    if (textArea.value.trim() === "") {
+        const no_answer = document.querySelector(".message_no_answer");
+        no_answer.innerHTML = "برجاء كتابه اجابه ";
         no_answer.classList.replace("d-none", "d-block");
         clear();
-    }
-
-
-    
-}
-
+    } 
+    else {
+        message.textContent = "Text area is empty.";
+        collect_data.push(textArea.value);
+        sendData();
+        let last_section = document.querySelector(".q10");
+        let next_section = document.querySelector(".finish_message");
+        last_section.classList.replace("d-block", "d-none");
+        next_section.classList.replace("d-none", "d-block");
+        celebrate();
+    }   
+};
 
 function sendData() {
     const scriptURL = "https://script.google.com/macros/s/AKfycbxB67oZ04qYy4rAuim7BD3QV8IEECHR2uy2Flw_uQmpFj4E5sZUYwhKemfcdi3gRXTf/exec";
@@ -160,19 +155,19 @@ const animItem = bodymovin.loadAnimation({
     animType: 'svg',
     loop: false,
     autoplay: false,
-    path: 'https://lottie.host/4e48bd9d-d814-4153-9e7c-f6cd8f134e12/HZFrWp3taO.json'
+    path: 'https://lottie.host/7f9125ab-d58a-47f0-9f4e-f06900091111/qRgw3Yrv0n.json'
 });
 
 // play.addEventListener('click', () => {
-    
+
 // })
 
-function celebrate(){
+function celebrate() {
     svgContainer.classList.remove('hide1');
-    animItem.goToAndPlay(0,true);
+    animItem.goToAndPlay(0, true);
 }
 
 animItem.addEventListener('complete', () => {
     svgContainer.classList.add('hide1');
-    
+
 })
