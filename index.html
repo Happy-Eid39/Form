@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>مسابقه رمضان</title>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=256&id=RO7w2FgTtOKn&format=png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
                             </h3>
                         </div>
                         <div class="w-100 d-flex justify-content-center align-items-center mt-3">
-                            <div class="input-group d-flex justify-content-center align-items-center">
+                            <div class="input-group d-flex justify-content-center align-items-center" id="name_input">
                                 <!-- <label class="input-group__label" for="myInput">My Label</label> -->
                                 <input type="text" id="myInput" class="input-group__input" placeholder="ادخل الاسم" />
                             </div>
@@ -163,8 +164,8 @@
                                 </div>
                                 <div class="ratio_answer">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault3">
-                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        id="flexRadioDefault4">
+                                    <label class="form-check-label" for="flexRadioDefault4">
                                         جميع ما سبق .
                                     </label>
                                 </div>
@@ -406,7 +407,23 @@
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>  
                             </div>
                             <div class="submit d-flex justify-content-center align-items-center ">
-                                <button type="submit" class=" Next_btn" onclick="last_q()">التالي</button>
+                                <button type="submit" class=" Next_btn" onclick="q10()">التالي</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="q11 q_space d-none">
+                        <h4>
+                        </h4>
+                        <h3>
+                            سبيلي اي حاجه عايزه تقوليها<br> او اقتراح لمسابقه السنه الجايه ان شاء الله 
+                        </h3>
+                        <div class="answer d-flex ">
+                            <div class="textarea_input d-flex flex-column justify-content-center align-items-center">
+                                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>  
+                            </div>
+                            <div class="submit d-flex justify-content-center align-items-center ">
+                                <button type="submit" class=" Next_btn" onclick="q11()">التالي</button>
                             </div>
                         </div>
                     </div>
@@ -414,14 +431,25 @@
                         برجاء اختيار اجابه من الأتي.
                     </p>
                     <div class="finish_message d-none">
-                        <h1>
-                            مـبـارك
-                        </h1>
+                        
                         <p id="special_message">
-                            اللهم ارزقها بر والديها والجنه
-                            اللهم ارزقها بر والديها والجنه
-                            اللهم ارزقها بر والديها والجنه
+                            ربنا يبشرك بجمال ايامك القادمه ويجعلك واثقه بالله متوكله عليه 
+                            و ممن اعتق رقابهم من النار 
                         </p>
+                        <div class="submit d-flex justify-content-center align-items-center ">
+                            <button type="submit" class=" Next_btn" onclick="show_result()">اظهارالنتيجه</button>
+                        </div>
+                    </div>
+                    <div class="result d-none">
+                        <div class="result_card">
+                            <div>
+                                <p id="result_num">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="submit d-flex justify-content-center align-items-center ">
+                            <button type="submit" class=" Next_btn" onclick="end()">انهاء</button>
+                        </div>
                     </div>
                 </div>
             </div>

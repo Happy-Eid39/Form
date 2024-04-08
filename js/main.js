@@ -46,6 +46,9 @@ function switch_number_section(page) {
     // console.log(num_last)
     // console.log(num_next)
 }
+
+let correct_answer = ['صوت انفاس الخيل اذا اسرع.', 'كأسا من الخمر.', 'جميع ما سبق .', 'مختلط .', 'الفرش المنقوشه  .', 'اعتيادهم للنعم .', 'عين ماء شديده الحرارة .', 'جميع ما سبق .', 'الحمل الثقيل .']
+let result = 0;
 function checkRadio(page) {
     let page_section = document.querySelector(`.${page}`);
     var radios = page_section.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
@@ -92,30 +95,46 @@ function get_answer(page) {
         // console.log(checkedRadioButton)
         const selectedLabel = page.querySelector(`label[for="${checkedRadioButton.id}"]`).textContent;
         let value = selectedLabel.trim();
+        if (correct_answer.includes(value)) {
+            result += 1;
+            console.log(result);
+        }
         collect_data.push(value);
         // console.log(value);
         // console.log(typeof(value));
         // console.log(collect_data);
     }
 }
-function last_q() {
+function q10() {
     var textArea = document.getElementById("exampleFormControlTextarea1");
     if (textArea.value.trim() === "") {
         const no_answer = document.querySelector(".message_no_answer");
         no_answer.innerHTML = "برجاء كتابه اجابه ";
         no_answer.classList.replace("d-none", "d-block");
         clear();
-    } 
+    }
     else {
-        message.textContent = "Text area is empty.";
         collect_data.push(textArea.value);
-        sendData();
+        result += 1;
         let last_section = document.querySelector(".q10");
-        let next_section = document.querySelector(".finish_message");
+        let next_section = document.querySelector(".q11");
         last_section.classList.replace("d-block", "d-none");
         next_section.classList.replace("d-none", "d-block");
-        celebrate();
-    }   
+    }
+};
+function q11() {
+    var textArea = document.getElementById("exampleFormControlTextarea1");
+    collect_data.push(textArea.value);
+    let last_section = document.querySelector(".q11");
+    let next_section = document.querySelector(".finish_message");
+    last_section.classList.replace("d-block", "d-none");
+    next_section.classList.replace("d-none", "d-block");
+    sendData();
+    celebrate();
+    // console.log(result);
+    // console.log(collect_data);
+
+
 };
 
 function sendData() {
@@ -171,3 +190,20 @@ animItem.addEventListener('complete', () => {
     svgContainer.classList.add('hide1');
 
 })
+
+function show_result(){
+    const finish_message = document.querySelector(".finish_message");
+    const result_page = document.querySelector(".result");
+    const result_num = document.getElementById("result_num");
+    finish_message.classList.replace("d-block", "d-none");
+    result_page.classList.replace("d-none","d-block");
+    result_num.innerHTML=`10 \\ ${result}`
+
+    // console.log(finish_message)
+    // alert("تم التقييم بنجاح")
+    clear();
+}
+
+function end(){
+    window.location.href = 'index.html';
+}
