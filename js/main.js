@@ -125,6 +125,7 @@ function q10() {
 function q11() {
     var textArea = document.getElementById("exampleFormControlTextarea1");
     collect_data.push(textArea.value);
+    collect_data.push(result);
     let last_section = document.querySelector(".q11");
     let next_section = document.querySelector(".finish_message");
     last_section.classList.replace("d-block", "d-none");
@@ -141,9 +142,9 @@ function sendData() {
     const scriptURL = "https://script.google.com/macros/s/AKfycbxB67oZ04qYy4rAuim7BD3QV8IEECHR2uy2Flw_uQmpFj4E5sZUYwhKemfcdi3gRXTf/exec";
     // console.log(collect_data)
     let dataList = [
-        { field1: collect_data[0], field2: collect_data[1], field3: collect_data[2], field4: collect_data[3], field5: collect_data[4], field6: collect_data[5], field7: collect_data[6], field8: collect_data[7], field9: collect_data[8], field10: collect_data[9], field11: collect_data[10] }
+        { field1: collect_data[0], field2: collect_data[1], field3: collect_data[2], field4: collect_data[3], field5: collect_data[4], field6: collect_data[5], field7: collect_data[6], field8: collect_data[7], field9: collect_data[8], field10: collect_data[9], field11: collect_data[10], field12: collect_data[11], field13: collect_data[12] }
     ];
-    // console.log(dataList)
+    console.log(dataList)
     fetch(scriptURL, {
         method: 'POST',
         body: JSON.stringify(dataList)
@@ -191,19 +192,19 @@ animItem.addEventListener('complete', () => {
 
 })
 
-function show_result(){
+function show_result() {
     const finish_message = document.querySelector(".finish_message");
     const result_page = document.querySelector(".result");
     const result_num = document.getElementById("result_num");
     finish_message.classList.replace("d-block", "d-none");
-    result_page.classList.replace("d-none","d-block");
-    result_num.innerHTML=`10 \\ ${result}`
+    result_page.classList.replace("d-none", "d-block");
+    result_num.innerHTML = `10 \\ ${result}`
 
     // console.log(finish_message)
     // alert("تم التقييم بنجاح")
     clear();
 }
 
-function end(){
-    window.location.href = 'index.html';
-}
+// function end() {
+//     window.location.href = 'index.html';
+// }
