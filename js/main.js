@@ -205,6 +205,6 @@ function show_result() {
     clear();
 }
 
-// function end() {
-//     window.location.href = 'index.html';
-// }
+function end() {
+    window.location.href = 'index.html';
+}
