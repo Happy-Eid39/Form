@@ -109,7 +109,7 @@ html {
 }
 
 .input-group__input:focus {
-    outline: 2px dashed #000000;
+    outline: 2px dashed #fbff00;
     outline-offset: 0.1em;
 }
 
