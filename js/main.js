@@ -49,20 +49,21 @@ function switch_number_section(page) {
 function checkRadio(page) {
     let page_section = document.querySelector(`.${page}`);
     var radios = page_section.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
+    let checkedValue = true;
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
-            checkedValue = radios[i].value;
+            checkedValue = false;
             // console.log("Option " + checkedValue + " is checked");
             num_last += 1
             num_next += 1
             switch_btn();
             break; // Exit the loop once a checked radio is found
         }
-        else {
-            // console.log("No option is checked");
-            no_answer.classList.replace("d-none", "d-block");
-            clear();
-        }
+    }
+    if (checkedValue) {
+        // console.log("No option is checked");
+        no_answer.classList.replace("d-none", "d-block");
+        clear();
     }
 }
 
@@ -97,7 +98,7 @@ function get_answer(page) {
 function last_q() {
     let q10 = document.querySelector('.q10');
     var radios = q10.querySelectorAll('input[type="radio"][name="flexRadioDefault"]');
-    var checkedValue = null;
+    let checkedValue = true;
 
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
@@ -108,12 +109,13 @@ function last_q() {
             last_section.classList.replace("d-block", "d-none");
             next_section.classList.replace("d-none", "d-block");
             celebrate();
+            checkedValue = false;
             break; 
         }
-        else{
-            no_answer.classList.replace("d-none", "d-block");
-            clear();
-        }
+    }
+    if (checkedValue){
+        no_answer.classList.replace("d-none", "d-block");
+        clear();
     }
 
 
